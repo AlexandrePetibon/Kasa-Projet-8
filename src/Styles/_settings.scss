@@ -1,0 +1,22 @@
+/**********          VARIABLE          **********/
+
+/* Color */
+$color-principal : #FF6060;
+
+/*Font-size*/
+$font-mobil-nav-footer : 12px;
+$font-desktop-nav-footer : 18px;
+
+/**********          MIXIN          **********/
+
+/*Display*/
+@mixin display-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin display-nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 26px;
+}

@@ -1,0 +1,40 @@
+/**********          VARIABLE          **********/
+/* Color */
+/*Font-size*/
+/**********          MIXIN          **********/
+/*Display*/
+.navigation {
+  margin: 20px 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navigation img {
+  width: 50%;
+  height: 100%;
+}
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 26px;
+  padding: 0;
+}
+.navigation ul li {
+  color: #FF6060;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 600px) {
+  .navigation ul li {
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+}/*# sourceMappingURL=index.css.map */
