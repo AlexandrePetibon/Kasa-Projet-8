@@ -1,10 +1,6 @@
 .navigation {
     margin: 20px 20px 0 20px;
     @include display-header();
-    img {
-        width: 50%;
-        height: 100%;
-    }
    ul {
         @include display-nav();
         padding: 0;
@@ -21,4 +17,3 @@
         }    
     } 
 }
-

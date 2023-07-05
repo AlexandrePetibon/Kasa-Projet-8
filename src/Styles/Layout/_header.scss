@@ -1,0 +1,7 @@
+.header {
+    @include display-header();
+         &__img {
+        width: 50%;
+        height: 100%;
+        }
+}
