@@ -1,19 +1,28 @@
 .navigation {
     margin: 20px 20px 0 20px;
     @include display-header();
-   ul {
+   nav {
         @include display-nav();
         padding: 0;
-        li {
+        gap: 12px;
+        font-weight: $weight-general;
+        a {
             color: $color-principal;
-            list-style-type: none;
             text-decoration: none;
             font-size: $font-mobil-nav-footer;
             text-transform: uppercase;
-            @media screen and (min-width: 600px) {
+        }
+        &.active {
+            border-bottom: 1px solid $color-principal;
+            }
+    } 
+    @media screen and (min-width: 800px) {
+        nav {
+            gap: 50px;
+            a {
                 font-size: $font-desktop-nav-footer;
                 text-transform: capitalize;
             }
-        }    
-    } 
+        }
+    }
 }

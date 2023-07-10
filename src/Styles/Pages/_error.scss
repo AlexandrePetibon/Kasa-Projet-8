@@ -1,0 +1,39 @@
+.error {
+    @include body-central-vertical();
+    color: $color-principal;
+    padding: 0;
+    margin: 0;
+    .error-number {
+        font-weight: 700;
+        font-size: 58px;
+        margin-top: $margin-error-mobil;
+        margin-bottom: 0;
+    }
+    .first-message-error {
+        font-size: $font-title-secondary;
+        margin-top: $margin-error-mobil;
+        margin-bottom: 0;
+    }
+    .second-message-error {
+        font-size: $font-text;
+        margin-top: $margin-error-mobil;
+        margin-bottom: $margin-error-mobil;;
+    }
+    @media screen and (min-width: 800px) {
+        .error-number {
+            font-size: 288px;
+            margin-top: $margin-error-desktop;
+            margin-bottom: 0;
+        }
+        .first-message-error{
+            font-size: 36px;
+            margin-top: $margin-error-desktop;
+            margin-bottom: 0;
+        }
+        .second-message-error{
+            font-size: $font-title-secondary;
+            margin-top: $margin-error-desktop;
+            margin-bottom: $margin-error-desktop;;
+        }
+    }
+}
