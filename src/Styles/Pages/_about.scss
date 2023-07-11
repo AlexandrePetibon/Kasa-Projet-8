@@ -1,0 +1,17 @@
+.about-body {
+    @include margin-left-right-mobile();
+    margin-top: 19px;
+    margin-bottom: 19px;
+    img {
+        height: 223px;
+        @include banner-mobile();
+    }
+    @media screen and (min-width: 800px) {
+        @include margin-left-right-desktop();
+        margin-top: 38px;
+        margin-bottom: 38px;
+        img {
+            border-radius: $border-radius-desktop;
+        }
+    }
+}

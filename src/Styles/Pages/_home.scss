@@ -1,0 +1,10 @@
+.home-body {
+    @include margin-left-right-mobile();
+    margin-top: 27px;
+    margin-bottom: 27px;
+    @media screen and (min-width: 800px) {
+        @include margin-left-right-desktop();
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

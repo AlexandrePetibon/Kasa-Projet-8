@@ -14,10 +14,13 @@
         margin-top: $margin-error-mobil;
         margin-bottom: 0;
     }
+    a {text-decoration: none;
+        color: $color-principal;}
     .second-message-error {
         font-size: $font-text;
         margin-top: $margin-error-mobil;
-        margin-bottom: $margin-error-mobil;;
+        margin-bottom: $margin-error-mobil;
+        
     }
     @media screen and (min-width: 800px) {
         .error-number {

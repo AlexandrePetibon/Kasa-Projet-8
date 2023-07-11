@@ -1,0 +1,11 @@
+.banner-home {
+    img {
+        @include banner-mobile;
+        height: 111px;
+    }
+    @media screen and (min-width: 800px) {
+        img {
+        border-radius: $border-radius-desktop;
+        height: 223px;}
+    }
+}
