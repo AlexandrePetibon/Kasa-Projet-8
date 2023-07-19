@@ -2,9 +2,25 @@
     @include margin-left-right-mobile();
     margin-top: 27px;
     margin-bottom: 27px;
+    .banner-small-home {
+        position: relative;
+        .text-banner-home {
+            position: absolute;
+            top: 40%;
+            left: 33%;
+            font-size: $font-desktop-nav-footer;
+            max-width: 170px;
+        }
+    }
     @media screen and (min-width: 800px) {
         @include margin-left-right-desktop();
         margin-top: 50px;
         margin-bottom: 50px;
+        .banner-small-home {
+            .text-banner-home {
+            font-size: 48px;
+            max-width: none;
+        }
+        }
     }
 }

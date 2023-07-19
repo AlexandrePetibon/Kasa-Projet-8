@@ -2,13 +2,18 @@
     margin-top: 20px;
     @include margin-left-right-mobile();
     @include display-header();
-         img {
+         .logo-header {
             height: 46px;
         }
+        nav {
+            .active {
+                    text-decoration: $color-principal underline;
+                }
+            }
         @media screen and (min-width: 800px) {
             margin-top: 45px;
             @include margin-left-right-desktop;
-            &__img {
+            .logo-header {
                 height: 68px;
             }
         }

@@ -1,10 +1,9 @@
 import React from 'react';
-import pictureHome from '../assets/pictureHome.png'
 
-const Banner = () => {
+const Banner = ({dimBanner, picture}) => {
     return (
-        <div className='banner-home'>
-            <img src={pictureHome} alt="" />
+        <div className={`${dimBanner}`}>
+            <img className="banner-home" src={picture} alt="" />
         </div>
     );
 };
