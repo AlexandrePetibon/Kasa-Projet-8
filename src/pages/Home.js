@@ -3,8 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import pictureHome from '../assets/pictureHome.png';
-import Card from "../components/Card";
-import data from "../data/data.json";
+import Cards from "../components/Cards";
 
 const Home = () => {
   return (
@@ -16,11 +15,7 @@ const Home = () => {
           <p className="text-banner-home">Chez vous, partout et ailleurs</p>
         </div>
         <section>
-          <div className="cards">
-            {data.map((item) => (
-              <Card key={item.id} cardData={item} />
-            ))}
-          </div>
+          <Cards />
         </section>
       </main>
       <Footer />
