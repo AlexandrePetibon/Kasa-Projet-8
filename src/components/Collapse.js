@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import arrow from "../assets/arrow.png";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({title, content}) => {
   const [collapse, setCollapse] = useState(true);
 
   const toggleCollapse = () => {
@@ -9,8 +10,11 @@ const Collapse = ({ title, content }) => {
 
   return (
     <div onClick={toggleCollapse}>
-      <h3>{title}</h3>
-      {collapse ? null : <p>{content}</p>}
+      <h3 className='about-collapse-title'>
+        {title}
+        <img className="arrow-collapse" src={arrow} alt="Arrow" />
+      </h3>
+      {collapse ? null : <p className='text-collapse-about'>{content}</p>}
     </div>
   );
 };

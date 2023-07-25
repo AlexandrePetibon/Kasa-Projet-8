@@ -1,6 +1,14 @@
 .card {
     width: 340px;
     height: 340px;
-    border-radius: 10px;
+    border-radius: $border-radius-mobile;
    background: center/cover;
+
+   .title-card, .location-card{
+    font-size: 18px;
+    color: $color-principal;
+    
+    font-weight: $weight-general;
+
+   }
 }

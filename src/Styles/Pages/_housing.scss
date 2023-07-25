@@ -1,0 +1,48 @@
+.body-housing {
+    color : $color-principal;
+    @include margin-left-right-mobile;
+    .img-body-housing {
+      border-radius: $border-radius-mobile;
+    }
+    .general-housing {
+      .tag-box {
+        display: flex;
+        .tag {
+        background-color: $color-principal;
+        color: $color-white;
+        border-radius: $border-radius-mobile;
+      }
+      }
+      
+        .identification-host {
+          display: flex;
+          justify-content: space-between;
+          .host-name-picture {
+            display: flex;
+            .picture-host {
+                border-radius: 100px;
+            }
+          }
+   
+      }
+    }
+  
+    @media screen and (min-width: 800px) {
+      @include margin-left-right-desktop;
+      .img-body-housing {
+        border-radius: $border-radius-desktop;
+      }
+      .general-housing {
+        display: flex;
+        justify-content: space-between;
+
+        .identification-host{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+      }
+      .collapse-housing {
+        display: flex;
+      }
+    }
+  }
