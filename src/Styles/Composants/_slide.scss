@@ -1,0 +1,41 @@
+.slide-general {
+    position: relative;
+  
+    .slide-image {
+      width: 100%;
+      height: 255px;
+      border-radius: 10px;
+      background: cover;
+  
+      @media screen and (min-width: 800px) {
+        height: 415px;
+        border-radius: 25px;
+      }
+    }
+  
+    .arrow-left,
+    .arrow-right {
+      position: absolute;
+      top: 100px;
+      cursor: pointer;
+    }
+  
+    .arrow-left {
+      left: 20px;
+    }
+  
+    .arrow-right {
+      right: 20px;
+    }
+  
+    .slide-counter {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      color: $color-white;
+      font-size: 16px;
+    }
+  }

@@ -1,23 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import data from "../data/data.json";
 import { useParams } from 'react-router-dom';
 import Collapse from 'components/Collapse';
+import starActive from '../assets/starActive.png';
+import starInactive from '../assets/starInactive.png';
+import Slide from 'components/Slide';
 
 const Housing = () => {
   const { id } = useParams();
   const selectedHousing = data.find((item) => item.id === id);
 
+  const ratingStars = [];
+  for (let i = 1; i <= 5; i++) {
+    ratingStars.push(
+      <img
+        key={i}
+        src={i <= selectedHousing.rating ? starActive : starInactive}
+        alt={`Star ${i}`}
+      />
+    );
+  }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Header />
       <div className='body-housing'>
-        <img className='img-body-housing' src={selectedHousing.pictures[0]} alt={selectedHousing.title} />
+        <Slide pictures={selectedHousing.pictures} />
         <div className='general-housing'>
           <div className='description-general'>
-            <h1>{selectedHousing.title}</h1>
-            <p>{selectedHousing.location}</p>
+            <h1 className='title-housing'>{selectedHousing.title}</h1>
+            <p className='second-title-housing'>{selectedHousing.location}</p>
             <div className='tag-box'>
               {selectedHousing.tags.map((tag, index) => (
                 <div key={index} className='tag'>
@@ -27,19 +45,19 @@ const Housing = () => {
             </div>
           </div>
           <div className='identification-host'>
-            <p>{selectedHousing.rating}</p>
+            <div className='rating-stars'>{ratingStars}</div>
             <div className='host-name-picture'>
-              <p>{selectedHousing.host.name}</p>
+              <p className='name-host'>{selectedHousing.host.name}</p>
               <img className="picture-host" src={selectedHousing.host.picture} alt={selectedHousing.host.name} />
             </div>
           </div>
         </div>
         <div className='collapse-housing'>
-          <Collapse
+          <Collapse className="test"
             title="Description"
             content={selectedHousing.description}
           />
-          <Collapse
+          <Collapse className="test"
             title="Equipements"
             content={selectedHousing.equipments.join(', ')}
           />

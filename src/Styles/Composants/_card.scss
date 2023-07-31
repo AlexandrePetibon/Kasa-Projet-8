@@ -1,14 +1,33 @@
 .card {
-    width: 340px;
-    height: 340px;
+    width: 335px;
+    height: 255px;
     border-radius: $border-radius-mobile;
-   background: center/cover;
+    background: center/cover, linear-gradient(180deg, #fff, #000000);
+    text-decoration: none;
 
    .title-card, .location-card{
     font-size: 18px;
     color: $color-principal;
-    
     font-weight: $weight-general;
+    margin-left: 19px;
+    width: 60%;
+   }
+   .title-card {
+    margin-top: 160px;
+   }
+
+   @media screen and (min-width: 800px) { 
+    width: 340px;
+    height: 340px;
+    .title-card, .location-card{
+       
+ 
+        margin-left: 20px;
+       }
+       .title-card {
+        margin-top: 250px;
+       }
 
    }
+
 }
