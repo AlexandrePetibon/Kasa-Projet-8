@@ -33,7 +33,7 @@ const Slide = ({ pictures }) => {
       />
       {showArrows && (
         <img
-          className="arrow arrow-right"  // <-- Correct class name here
+          className="arrow arrow-right"
           src={arrowRight}
           alt="Right Arrow"
           onClick={() => handleArrowClick('right')}

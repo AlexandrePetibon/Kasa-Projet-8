@@ -3,15 +3,29 @@
     margin-top: 27px;
     margin-bottom: 27px;
     .banner-small-home {
-        position: relative;
-        .text-banner-home {
-            position: absolute;
-            top: 40%;
-            left: 33%;
-            font-size: $font-desktop-nav-footer;
-            max-width: 170px;
-        }
+       .small {
+      position: relative; 
+      
+        .banner-home {
+
+            border-radius: 25px;
+            } 
+    
+        
     }
+    
+      .text-banner-home {
+        position: absolute;
+        
+        top: 50%;
+        left: 20%;
+        right: 20%;
+        font-size: $font-desktop-nav-footer;
+        max-width: 170px;
+        color: $color-white;
+      }
+    }
+  
     @media screen and (min-width: 800px) {
         @include margin-left-right-desktop();
         margin-top: 50px;
@@ -20,7 +34,11 @@
             .text-banner-home {
             font-size: 48px;
             max-width: none;
+            top: 200px;
+            left: 14%;
+            right: 14%;
         }
         }
     }
 }
+

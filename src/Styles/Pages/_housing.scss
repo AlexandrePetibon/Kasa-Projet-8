@@ -7,6 +7,8 @@
   }
 
   .general-housing {
+    margin-top: 15px;
+ 
     .description-general {
       .title-housing {
         font-size: $font-title-secondary;
@@ -37,12 +39,23 @@
     .identification-host {
       display: flex;
       justify-content: space-between;
-
+      .rating-stars {
+        .stars {
+          width: 18px;
+        height: 18px;
+        }
+        
+      }
       .host-name-picture {
         display: flex;
-
+        .name-host {
+          font-size: 12px;
+          width: 93px;
+        }
         .picture-host {
           border-radius: 100px;
+          width: 32px;
+          height: 32px;
         }
       }
     }
@@ -50,7 +63,7 @@
     .collapse-housing {
       display: flex;
       justify-content: space-around;
-
+      gap: 20px;
       .test {
         height: 40px;
       }
@@ -66,7 +79,7 @@
     .general-housing {
       display: flex;
       justify-content: space-between;
-
+      margin-top: 30px;
       .description-general {
         .title-housing {
           font-size: $font-title-principal;
@@ -86,13 +99,29 @@
       .identification-host {
         display: flex;
         flex-direction: column-reverse;
+        .rating-stars {
+          .stars {
+            width: 36px;
+          height: 36px;
+          }
+          
+        }
+        .host-name-picture {
+          .name-host {
+            font-size: 18px;
+          }
+          .picture-host {
+            width: 64px;
+            height: 64px;
+          }
+        }
       }
     }
 
     .collapse-housing {
       display: flex;
       justify-content: space-around;
-
+      gap: 76px;
       .test {
         height: 40px;
       }

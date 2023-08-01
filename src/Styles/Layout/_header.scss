@@ -3,7 +3,8 @@
     @include margin-left-right-mobile();
     @include display-header();
          .logo-header {
-            height: 46px;
+            height: 35px;
+            width: 100px;
         }
         nav {
             .active {
@@ -15,6 +16,7 @@
             @include margin-left-right-desktop;
             .logo-header {
                 height: 68px;
+                width: 210px;
             }
         }
  }

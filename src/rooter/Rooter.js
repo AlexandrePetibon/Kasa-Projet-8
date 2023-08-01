@@ -7,7 +7,7 @@ import Accomodation from '../pages/Housing';
 
 const Rooter = () => {
     return (
-        <div>
+
             <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ const Rooter = () => {
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
-        </div>
+
     );
 };
 

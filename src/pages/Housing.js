@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import data from "../data/data.json";
-import { useParams } from 'react-router-dom';
 import Collapse from 'components/Collapse';
 import starActive from '../assets/starActive.png';
 import starInactive from '../assets/starInactive.png';
@@ -17,8 +17,9 @@ const Housing = () => {
     ratingStars.push(
       <img
         key={i}
-        src={i <= selectedHousing.rating ? starActive : starInactive}
+        src={i <= selectedHousing?.rating ? starActive : starInactive}
         alt={`Star ${i}`}
+        className='stars'
       />
     );
   }
@@ -26,6 +27,27 @@ const Housing = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [shouldRedirect, setShouldRedirect] = useState(false);
+  const navigate = useNavigate(); 
+
+  useEffect(() => {
+
+    if (!selectedHousing) {
+      setShouldRedirect(true);
+    }
+  }, [selectedHousing]);
+
+
+  useEffect(() => {
+    if (shouldRedirect) {
+      navigate('/error');
+    }
+  }, [shouldRedirect, navigate]);
+
+  if (!selectedHousing) {
+    return null;
+  }
 
   return (
     <div>

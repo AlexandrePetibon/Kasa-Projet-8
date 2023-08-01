@@ -1,8 +1,8 @@
     .banner-home {
         @include banner-mobile;
-       
+        filter: brightness(0.7);
         .small {
-           height: 111px;  
+           height: 111px;
         }
         .medium {
           height: 223px;  
