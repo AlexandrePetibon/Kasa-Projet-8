@@ -12,9 +12,9 @@ const Collapse = ({ title, content }) => {
 
   return (
     <div className='collapse-general'>
-      <h3 className='about-collapse-title'>
+      <h3 className='about-collapse-title' onClick={toggleCollapse}>
         {title}
-        <img onClick={toggleCollapse}
+        <img
           className="arrow-collapse"
           src={arrow}
           alt="Arrow"
