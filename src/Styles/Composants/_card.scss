@@ -5,29 +5,22 @@
     background: center/cover, linear-gradient(180deg, #fff, #000000);
     text-decoration: none;
 
-   .title-card, .location-card{
+   .title-card {
     font-size: 18px;
-    color: $color-principal;
+    color: $color-white;
     font-weight: $weight-general;
     margin-left: 19px;
     width: 60%;
-   }
-   .title-card {
     margin-top: 160px;
    }
 
    @media screen and (min-width: 800px) { 
     width: 340px;
     height: 340px;
-    .title-card, .location-card{
-       
- 
+
+    .title-card {
+        margin-top: 250px;
         margin-left: 20px;
        }
-       .title-card {
-        margin-top: 250px;
-       }
-
    }
-
 }

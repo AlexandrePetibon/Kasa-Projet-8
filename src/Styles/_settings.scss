@@ -69,6 +69,11 @@ $border-radius-desktop : 25px;
     align-items: center;
 }
 
+@mixin flex-center {
+    display: flex;
+      justify-content: center;
+}
+
 /* Margin & Padding */
 
 @mixin margin-left-right-desktop {

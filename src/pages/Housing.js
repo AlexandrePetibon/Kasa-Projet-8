@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import data from "../data/data.json";
-import Collapse from 'components/Collapse';
-import starActive from '../assets/starActive.png';
-import starInactive from '../assets/starInactive.png';
-import Slide from 'components/Slide';
+import Collapse from "components/Collapse";
+import starActive from "../assets/starActive.png";
+import starInactive from "../assets/starInactive.png";
+import Slide from "components/Slide";
 
 const Housing = () => {
   const { id } = useParams();
@@ -19,7 +19,7 @@ const Housing = () => {
         key={i}
         src={i <= selectedHousing?.rating ? starActive : starInactive}
         alt={`Star ${i}`}
-        className='stars'
+        className="stars"
       />
     );
   }
@@ -29,19 +29,17 @@ const Housing = () => {
   }, []);
 
   const [shouldRedirect, setShouldRedirect] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
-
     if (!selectedHousing) {
       setShouldRedirect(true);
     }
   }, [selectedHousing]);
 
-
   useEffect(() => {
     if (shouldRedirect) {
-      navigate('/error');
+      navigate("/error");
     }
   }, [shouldRedirect, navigate]);
 
@@ -52,36 +50,42 @@ const Housing = () => {
   return (
     <div>
       <Header />
-      <div className='body-housing'>
+      <div className="body-housing">
         <Slide pictures={selectedHousing.pictures} />
-        <div className='general-housing'>
-          <div className='description-general'>
-            <h1 className='title-housing'>{selectedHousing.title}</h1>
-            <p className='second-title-housing'>{selectedHousing.location}</p>
-            <div className='tag-box'>
+        <div className="general-housing">
+          <div className="description-general">
+            <h1 className="title-housing">{selectedHousing.title}</h1>
+            <p className="second-title-housing">{selectedHousing.location}</p>
+            <div className="tag-box">
               {selectedHousing.tags.map((tag, index) => (
-                <div key={index} className='tag'>
+                <div key={index} className="tag">
                   {tag}
                 </div>
               ))}
             </div>
           </div>
-          <div className='identification-host'>
-            <div className='rating-stars'>{ratingStars}</div>
-            <div className='host-name-picture'>
-              <p className='name-host'>{selectedHousing.host.name}</p>
-              <img className="picture-host" src={selectedHousing.host.picture} alt={selectedHousing.host.name} />
+          <div className="identification-host">
+            <div className="rating-stars">{ratingStars}</div>
+            <div className="host-name-picture">
+              <p className="name-host">{selectedHousing.host.name}</p>
+              <img
+                className="picture-host"
+                src={selectedHousing.host.picture}
+                alt={selectedHousing.host.name}
+              />
             </div>
           </div>
         </div>
-        <div className='collapse-housing'>
-          <Collapse className="test"
+        <div className="collapse-housing">
+          <Collapse
+            className="test"
             title="Description"
             content={selectedHousing.description}
           />
-          <Collapse className="test"
+          <Collapse
+            className="test"
             title="Equipements"
-            content={selectedHousing.equipments.join(', ')}
+            content={selectedHousing.equipments.join(", ")}
           />
         </div>
       </div>

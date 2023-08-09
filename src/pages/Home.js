@@ -12,10 +12,11 @@ const Home = () => {
     <div>
       <Header />
       <main className="home-body">
-        <div className="banner-small-home">
-          <Banner dimBanner="small" picture={pictureHome} />
-          <p className="text-banner-home">Chez vous, partout et ailleurs</p>
-        </div>
+        <Banner
+          dimBanner="small"
+          picture={pictureHome}
+          texte1="Chez vous, partout et ailleurs"
+        />
         <section>
           <Cards data={housingData} />
         </section>

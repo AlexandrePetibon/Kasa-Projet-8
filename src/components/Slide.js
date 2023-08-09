@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import arrowLeft from "../assets/arrowLeft.png";
 import arrowRight from "../assets/arrowRight.png";
 
@@ -7,23 +7,25 @@ const Slide = ({ pictures }) => {
   const totalSlides = pictures.length;
 
   const handleArrowClick = (direction) => {
-    if (direction === 'right') {
+    if (direction === "right") {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-    } else if (direction === 'left') {
-      setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
+    } else if (direction === "left") {
+      setCurrentSlide(
+        (prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides
+      );
     }
   };
 
   const showArrows = totalSlides > 1;
 
   return (
-    <div className='slide-general'>
+    <div className="slide-general">
       {showArrows && (
         <img
           className="arrow arrow-left"
           src={arrowLeft}
           alt="Left Arrow"
-          onClick={() => handleArrowClick('left')}
+          onClick={() => handleArrowClick("left")}
         />
       )}
       <img
@@ -36,7 +38,7 @@ const Slide = ({ pictures }) => {
           className="arrow arrow-right"
           src={arrowRight}
           alt="Right Arrow"
-          onClick={() => handleArrowClick('right')}
+          onClick={() => handleArrowClick("right")}
         />
       )}
       <div className="slide-counter">

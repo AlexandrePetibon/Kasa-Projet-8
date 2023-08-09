@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Error from "../pages/Error";
-import Accomodation from '../pages/Housing';
+import Accomodation from "../pages/Housing";
 
 const Rooter = () => {
-    return (
-
-            <BrowserRouter>
+  return (
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/logement/:id" element={<Accomodation />} />
@@ -16,8 +15,7 @@ const Rooter = () => {
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
-
-    );
+  );
 };
 
 export default Rooter;

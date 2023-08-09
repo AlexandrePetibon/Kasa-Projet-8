@@ -13,7 +13,6 @@
         margin-top: 50px;
       }
     }
-  
     .arrow-left,
     .arrow-right {
       position: absolute;
@@ -36,8 +35,7 @@
       bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
-      display: flex;
-      justify-content: center;
+      @include flex-center;
       color: $color-white;
       font-size: 16px;
       visibility: hidden;
@@ -45,17 +43,19 @@
 
     @media screen and (min-width: 800px) {
 
-      .arrow-left,
+    .arrow-left,
     .arrow-right {
       width: 96px;
       height: 119px;
     }
+
       .slide-counter {
         visibility: visible;
       }
+
       .slide-counter {
         margin-bottom: 25px;
-        font-size: 18px;
-          }
+        font-size: $font-title-secondary;
+      }
     }
   }

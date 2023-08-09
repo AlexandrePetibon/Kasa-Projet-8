@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import arrow from '../assets/arrow.png';
+import React, { useState } from "react";
+import arrow from "../assets/arrow.png";
 
 const Collapse = ({ title, content }) => {
   const [collapse, setCollapse] = useState(true);
@@ -11,17 +11,18 @@ const Collapse = ({ title, content }) => {
   };
 
   return (
-    <div className='collapse-general'>
-      <h3 className='about-collapse-title' onClick={toggleCollapse}>
+    <div className="collapse-general">
+      <h3 className="about-collapse-title">
         {title}
         <img
+          onClick={toggleCollapse}
           className="arrow-collapse"
           src={arrow}
           alt="Arrow"
           style={{ transform: `rotate(${arrowRotation}deg)` }}
         />
       </h3>
-      <p className={`text-collapse-about ${collapse ? 'slide-up' : 'slide-down'}`}>{content}</p>
+      {collapse ? null : <p className="text-collapse-about">{content}</p>}
     </div>
   );
 };

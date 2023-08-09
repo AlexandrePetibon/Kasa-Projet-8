@@ -1,43 +1,33 @@
 .collapse-general {
   width: 100%;
-}
 
-.about-collapse-title {
-  background-color: $color-principal;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  height: 30px;
-  border-radius: 5px;
-  color: white;
-  position: relative;
+  .about-collapse-title {
+    background-color: $color-principal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+  }
 
   .arrow-collapse {
-    transition: transform 3s ease;
+      transition: transform 0.2s;
+    }
+
+  .text-collapse-about {
+    color: $color-principal;
+    position: relative;
   }
-}
 
-.text-collapse-about {
-  padding: 10px;
-  color: $color-principal;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: height 3s ease, opacity 3s ease;
-}
-
-/* Utilisez la classe slide-down pour afficher le texte */
-.slide-down {
-  height: auto;
-  opacity: 1;
-  padding: 10px;
-}
-
-/* Utilisez la classe slide-up pour masquer le texte */
-.slide-up {
-  height: 0;
-  opacity: 0;
-  padding: 0;
+  &.collapsed {
+    .text-collapse-about {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      color: $color-principal;
+    }
+  }
 }

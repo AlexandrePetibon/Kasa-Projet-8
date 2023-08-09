@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import Card from "./Card";
 
-const Cards = ({ data }) => { 
+const Cards = ({ data }) => {
   return (
     <div>
       <div className="cards">

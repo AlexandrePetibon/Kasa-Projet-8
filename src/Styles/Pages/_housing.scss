@@ -8,10 +8,12 @@
 
   .general-housing {
     margin-top: 15px;
- 
+
     .description-general {
+      
       .title-housing {
         font-size: $font-title-secondary;
+        margin-top: 0;
       }
 
       .second-title-housing {
@@ -37,9 +39,10 @@
     }
 
     .identification-host {
-      display: flex;
-      justify-content: space-between;
+      @include display-header;
+      margin-top: 16px;
       .rating-stars {
+        @include flex-center;
         .stars {
           width: 18px;
         height: 18px;
@@ -48,9 +51,10 @@
       }
       .host-name-picture {
         display: flex;
+        justify-content: flex-end;
         .name-host {
-          font-size: 12px;
-          width: 93px;
+          font-size: $font-mobil-nav-footer;
+          width: 78px;
         }
         .picture-host {
           border-radius: 100px;
@@ -61,12 +65,9 @@
     }
 
     .collapse-housing {
-      display: flex;
-      justify-content: space-around;
+      @include display-nav;
       gap: 20px;
-      .test {
-        height: 40px;
-      }
+      margin-bottom: 27px;
     }
   }
 
@@ -77,9 +78,8 @@
     }
 
     .general-housing {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 30px;
+      @include display-header;
+      margin-top: 20px;
       .description-general {
         .title-housing {
           font-size: $font-title-principal;
@@ -92,23 +92,23 @@
         .tag {
           width: 115px;
           height: 25px;
-          font-size: 14px;
+          font-size: $font-text;
         }
       }
 
       .identification-host {
         display: flex;
         flex-direction: column-reverse;
+  
         .rating-stars {
           .stars {
             width: 36px;
           height: 36px;
           }
-          
         }
         .host-name-picture {
           .name-host {
-            font-size: 18px;
+            font-size: $font-title-secondary;
           }
           .picture-host {
             width: 64px;
@@ -119,12 +119,9 @@
     }
 
     .collapse-housing {
-      display: flex;
-      justify-content: space-around;
+      @include display-nav;
       gap: 76px;
-      .test {
-        height: 40px;
-      }
+      margin-bottom: 20px;
     }
   }
 }

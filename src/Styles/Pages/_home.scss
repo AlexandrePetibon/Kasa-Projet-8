@@ -1,44 +1,24 @@
 .home-body {
-    @include margin-left-right-mobile();
-    margin-top: 27px;
-    margin-bottom: 27px;
-    .banner-small-home {
-       .small {
-      position: relative; 
-      
-        .banner-home {
-
-            border-radius: 25px;
-            } 
-    
-        
-    }
-    
-      .text-banner-home {
-        position: absolute;
-        
-        top: 50%;
-        left: 20%;
-        right: 20%;
-        font-size: $font-desktop-nav-footer;
-        max-width: 170px;
-        color: $color-white;
+  @include margin-left-right-mobile();
+  margin-top: 27px;
+  margin-bottom: 27px;
+  .banner-small-home {
+    .small {
+      position: relative;
+      .banner-home {
+        border-radius: 25px;
       }
     }
-  
-    @media screen and (min-width: 800px) {
-        @include margin-left-right-desktop();
-        margin-top: 50px;
-        margin-bottom: 50px;
-        .banner-small-home {
-            .text-banner-home {
-            font-size: 48px;
-            max-width: none;
-            top: 200px;
-            left: 14%;
-            right: 14%;
-        }
-        }
-    }
-}
+  }
 
+  @media screen and (min-width: 800px) {
+    @include margin-left-right-desktop();
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .banner-small-home {
+      .text-banner-home {
+        font-size: 48px;
+      }
+    }
+  }
+}

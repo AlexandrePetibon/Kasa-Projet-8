@@ -1,16 +1,20 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Collapse from '../components/Collapse';
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Collapse from "../components/Collapse";
 import pictureAbout from "../assets/pictureAbout.png";
-import Banner from '../components/Banner';
+import Banner from "../components/Banner";
 
 const About = () => {
   return (
     <div>
       <Header />
-      <main className='about-body'>
-        <Banner dimBanner='medium' picture={pictureAbout} alt="Image de montagne" />
+      <main className="about-body">
+        <Banner
+          dimBanner="medium"
+          picture={pictureAbout}
+          alt="Image de montagne"
+        />
         <div className="aboutCollapse">
           <Collapse
             title="Fiabilité"
