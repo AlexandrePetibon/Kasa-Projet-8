@@ -13,9 +13,12 @@
         font-size: $font-title-secondary;
         margin-top: $margin-error-mobil;
         margin-bottom: 0;
+        @include flex-center;
+        text-align: center;
     }
-    a {text-decoration: none;
-        color: $color-principal;}
+    a {
+        color: $color-principal;
+    }
     .second-message-error {
         font-size: $font-text;
         margin-top: $margin-error-mobil;
