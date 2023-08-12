@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Card = ({ cardData }) => {
-  const { id, cover, title, location } = cardData;
+  const { id, cover, title } = cardData;
 
   return (
     <NavLink
